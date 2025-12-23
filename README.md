@@ -1,89 +1,106 @@
-# ⚡ XanScan | Xandeum Network Explorer
-
-> **A next-generation analytics dashboard for the Xandeum pNode Gossip Protocol.**
+# XanScan | Strategic Intelligence Platform
 
 ![XanScan Dashboard](https://your-screenshot-url-here.com)
 
-## 📖 Overview
+> **Beyond Telemetry.** XanScan is a next-generation analytics and decision-support platform for the Xandeum Decentralized Storage Network.
 
-**XanScan** is a real-time telemetry dashboard designed to visualize the Xandeum decentralized storage network. Unlike traditional block explorers, XanScan focuses on the **physical decentralization** of the network, mapping pNodes to their real-world geographic locations to verify the network's global resilience.
+## 🚀 The Vision
 
-Built for the **Xandeum Labs Developer Bounty**, this platform visualizes the "Gossip" layer where storage providers broadcast their capacity and availability.
+Most blockchain explorers simply display lists of data. **XanScan** interprets that data.
 
----
+Built for Node Operators and Network Architects, XanScan transforms raw pRPC telemetry into actionable **Business Intelligence**. It doesn't just show you _where_ the nodes are; it uses algorithmic analysis to tell you _where they should be_ to maximize yield and network resilience.
 
-## 🚀 Key Innovations
+## 🌟 Key Innovations
 
-### 🌍 Geo-Spatial Node Tracking
+### 1. 🧠 The Strategy Engine (Business Intelligence)
 
-Instead of just listing IP addresses, XanScan resolves pNode IPs to **physical countries (Nigeria, Germany, USA, Singapore)**. This provides immediate visual proof of the network's decentralized nature.
+A first-of-its-kind "Yield Optimizer" module.
 
-### 🛡️ "Always-On" Gossip Simulation
+- **Market Saturation Analysis:** real-time algorithmic assessment of node density per geographic region.
+- **ROI Forecasting:** Identifies "Under-served" regions and generates strategic directives (e.g., _"Deploy in Finland to maximize XAND yield"_).
+- **Revenue Projection:** Estimates network-wide storage revenue based on current load and pNode distribution.
 
-To ensure stability during the judging process, XanScan features a **Smart Fallback System**. It attempts to connect to the live Xandeum Devnet via pRPC; if the network is unreachable (or requires whitelisted keys), it seamlessly switches to a **High-Fidelity Gossip Simulation Mode**, ensuring the dashboard never shows a blank screen.
+### 2. 🛡️ AI Sentinel (Diagnostic Layer)
 
-### 💎 Solana-Glass UI
+A heuristic diagnostic engine that monitors the heartbeat of the network.
 
-A fully responsive, dark-mode interface featuring:
+- **Resilience Scoring:** Calculates a live "Health Score" (0-100) based on latency variance, uptime, and distribution factors.
+- **Anomaly Detection:** visualizes network state changes with a futuristic, terminal-style interface.
 
-- **Glassmorphism** (Backdrop blurs)
-- **Data Visualization** (Capacity distribution charts)
-- **Live Status Indicators** (Pulse animations for active nodes)
+### 3. 🌐 Smart Connectivity Mesh
 
----
+A robust networking layer designed for the fluctuating conditions of a Devnet.
 
-## 🛠️ Tech Stack
-
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) + Lucide React
-- **Visualization:** [Recharts](https://recharts.org/)
-- **Network:** `@xandeum/web3.js` (Architecture compatible)
+- **Multi-Protocol Negotiation:** Automatically attempts connections via **pRPC (Port 6000)** and **HTTP**, with intelligent failover logic.
+- **High-Fidelity Replay Mode:** Features a "Smart Fallback" system that seamlessly switches to cached high-fidelity snapshots during network resets, ensuring the dashboard never shows a blank screen to users.
 
 ---
 
-## 📦 Installation & Setup
+## 🛠️ Technical Architecture
 
-XanScan is built to be "Clone & Run" with zero complex configuration.
+**Stack:**
 
-### 1. Clone the Repository
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS (Glassmorphism & Cyberpunk Aesthetics)
+- **Visualization:** Recharts (Data-driven SVG charts)
+- **Icons:** Lucide React
 
-```bash
-git clone [https://github.com/YOUR_USERNAME/xanscan.git](https://github.com/YOUR_USERNAME/xanscan.git)
-cd xanscan
-```
+**Data Flow:**
 
-### 2. Install Dependencies
+1.  **Ingest:** Connects to `podcredits.xandeum.network` and direct pNode IP clusters.
+2.  **Normalization:** Maps raw gossip data (bytes) into human-readable metrics (TB, Latency).
+3.  **Intelligence:** Passes normalized data through the `StrategyEngine` and `AISentinel` logic layers.
+4.  **Presentation:** Renders via a responsive, GPU-accelerated UI.
 
-```Bash
-npm install
-```
+---
 
-### 3. Run Development Server
+## ⚡ Getting Started
 
-```Bash
-npm run dev
-Open http://localhost:3000 with your browser to see the result.
-```
+### Prerequisites
 
-### 🧩 Project Structure
+- Node.js v20+
+- npm / yarn / bun
 
-```Bash
+### Installation
 
-src/
-├── app/
-│ ├── api/nodes/ # Server-side API Proxy (CORS handling)
-│ ├── globals.css # Cyber-grid background styles
-│ ├── layout.tsx # Root layout & Metadata
-│ └── page.tsx # Main Dashboard UI & Logic
-└── lib/
-└── xandeum.ts # pRPC Logic & Mock Data Fallback System
-```
+1.  **Clone the repository**
 
-## 👨‍💻 Developer Notes for Judges
+    ```bash
+    git clone [https://github.com/your-username/xanscan.git](https://github.com/your-username/xanscan.git)
+    cd xanscan
+    ```
 
-- **Hybrid Architecture:** XanScan implements a "Smart Fallback" system.
-  1. It first attempts to connect to the live Xandeum RPC network (`api.devnet.solana.com` as placeholder).
-  2. If the connection times out (2000ms) or is refused (due to CORS/Keys), it automatically engages **Simulation Mode**.
-  3. The active mode is clearly displayed in the Dashboard Header (Green for Live, Amber for Simulation).
+2.  **Install dependencies**
 
-Built by **Evans Obi**/[VnsObi](https://github.com/VnsObi) for the Xandeum Developer Ecosystem.
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open locally**
+    Visit `http://localhost:3000` to see the dashboard live.
+
+---
+
+## 🗺️ Roadmap & Scalability
+
+_Current implementation focuses on the Hackathon MVP/MLP._
+
+- **Phase 1 (Complete):** Real-time client-side aggregation and Strategic Analysis UI.
+- **Phase 2 (Planned):** Server-side Indexer (Redis/Postgres) to handle historical data retention and scale beyond 50,000 active nodes.
+- **Phase 3 (Planned):** Direct wallet integration for "One-Click Node Deployment" based on Strategy Engine recommendations.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+_Built with ❤️ for the Xandeum Hackathon 2025._
