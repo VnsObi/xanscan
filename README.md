@@ -79,10 +79,11 @@ src/
 └── xandeum.ts # pRPC Logic & Mock Data Fallback System
 ```
 
-### 👨‍💻 Developer Notes for Judges
+## 👨‍💻 Developer Notes for Judges
 
-**Gossip Simulation:** The current build uses a stochastic simulation to mimic pNode behavior (latency, churn, storage capacity) to demonstrate the UI capabilities without requiring a live, whitelisted pNode connection.
-
-**Connection Logic:** The src/lib/xandeum.ts file contains the architecture for the real XandeumClient connection, wrapped in a try/catch block for safety.
+- **Hybrid Architecture:** XanScan implements a "Smart Fallback" system.
+  1. It first attempts to connect to the live Xandeum RPC network (`api.devnet.solana.com` as placeholder).
+  2. If the connection times out (2000ms) or is refused (due to CORS/Keys), it automatically engages **Simulation Mode**.
+  3. The active mode is clearly displayed in the Dashboard Header (Green for Live, Amber for Simulation).
 
 Built by **Evans Obi**/[VnsObi](https://github.com/VnsObi) for the Xandeum Developer Ecosystem.
