@@ -1,6 +1,6 @@
 # XanScan | Strategic Intelligence Platform
 
-![XanScan Dashboard](https://github.com/VnsObi/xanscan/blob/main/Screenshot%202025-12-23%20at%203.40.02%20AM.png)
+![XanScan Dashboard](https://drive.google.com/file/d/13y0q69GzwIV7Qs5ZXQjEMmre7RCIqVXr/view?usp=drive_link)
 
 > **Beyond Telemetry.** XanScan is a next-generation analytics and decision-support platform for the Xandeum Decentralized Storage Network.
 
